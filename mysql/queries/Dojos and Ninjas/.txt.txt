@@ -1,0 +1,12 @@
+SELECT * FROM dojos;
+INSERT INTO dojos (name) VALUES ('africa'),('usa'),('canada');
+DELETE FROM dojos WHERE id=3 LIMIT
+INSERT INTO dojos (name) VALUES ('african'),('usan'),('canadan');
+SELECT * from ninjas;
+INSERT INTO ninjas (first_name , last_name , age , dojos_id) VALUES ('amine','rahmouni',21,1),('youcef','chriha',20,1),('farah','medini',18,1);
+NSERT INTO ninjas (first_name , last_name , age , dojos_id) VALUES ('amine','rahmouni',21,2),('youcef','chriha',20,2),('farah','medini',18,2);
+NSERT INTO ninjas (first_name , last_name , age , dojos_id) VALUES ('amine','rahmouni',21,3),('youcef','chriha',20,3),('farah','medini',18,3);
+DELETE  FROM ninjas WHERE dojos_id=1;
+DELETE  FROM ninjas WHERE dojos_id=3;
+DELETE  FROM dojos WHERE id>2;
+
