@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Posts</title>
+</head>
+<body>
+    <h3>
+    {{party.title}}
+    </h3>
+    <p>
+        Posted By : {{party.poster}}
+    </p>
+    <p>
+        Location : {{party.location}}
+    </p>
+    <p>
+        When : {{party.date}}
+    </p>
+    <p>
+        All Ages : {{party.all_ages}}
+    </p>
+    <br>
+    <p>
+        Description : {{party.description}}
+    </p>
+    <a href="/parties/{{party.id}}/edit" class="btn btn-primary">Edit</a>
+    <a href="/parties/{{party.id}}/destroy" class="btn btn-primary">Delete</a>
+    <div>
+        <a href="/dashboard" class="btn btn-secondary">Home</a>
+    </div>
+</body>
+</html>

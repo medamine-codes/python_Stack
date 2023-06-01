@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Share</title>
+</head>
+<body>
+    <h1>Welcome, {{recipe.poster}}</h1>
+    <div>
+        <a href="/recipes" class="btn btn-secondary">back te recipes</a>
+        <button><a href='/logout'>Log out </a></button>
+    </div>
+    <div>
+        <h2>
+        {{recipe.title}}
+        </h2>
+        <p>
+            Posted By : {{recipe.poster}}
+        </p>
+    </div>
+    <p>
+        Description : {{recipe.description}}
+    </p>
+    <p>
+        Under 30 mins : {%if recipe.under_30mins == 1%}
+                            True
+                        {%else%}
+                            False
+                        {%endif%}
+    </p>
+    <p>
+        Instructions : {{recipe.instruction}}
+    </p>
+    <br>
+    <p>
+        Date cooked/Made : : {{recipe.date_cooked}}
+    </p>
+    
+</body>
+</html>

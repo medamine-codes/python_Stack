@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Party Posts</title>
+</head>
+<body>
+    <div class="d-flex justify-content-between m-5">
+        <h1>Edit Party</h1>
+        <div>
+            <a href="/dashboard" class="btn btn-secondary">Home</a>
+        </div>
+    </div>
+    {%for message in get_flashed_messages()%}
+        <p class="text-danger">{{message}}</p>
+    {%endfor%}
+    <form action="/parties/{{party.id}}/update" method="post">
+        <div class="form-group">
+            <label for="">What</label>
+            <input type="text" name="title" class="form-control" value="{{party.title}}">
+        </div>
+        <div class="form-group">
+            <label for="">Location</label>
+            <input type="text" name="location" class="form-control" value="{{party.location}}">
+        </div>
+        <div class="form-group">
+            <label for="">Date</label>
+            <input type="date" name="date" class="form-control" value="{{party.date}}">
+        </div>
+        <div class="form-group">
+            <label for="">All Ages</label>
+            {% if party.all_ages == 1 %}
+                <input type="radio" name="all_ages" value="1" class="form-control" checked>
+                <label for="bold">True</label>
+                <input type="radio" name="all_ages" value="0" class="form-control">
+                <label for="normal">False</label>
+            {% else %}
+                <input type="radio" name="all_ages" value="1" class="form-control">
+                <label for="bold">True</label>
+                <input type="radio" name="all_ages" value="0" class="form-control"checked>
+                <label for="normal">False</label>
+            {% endif %}
+        </div>
+        <div class="form-group">
+            <label for="">Description</label>
+            <textarea name="description" class="form-control" id="" cols="30" rows="10">{{party.description}}</textarea>
+        </div>
+        <input type="hidden" name="id" value="{{party.id}}">
+        <input type="submit" value="update" class="btn btn-success">
+    </form>
+</body>
+</html>
