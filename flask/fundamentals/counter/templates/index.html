@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Counter</h1>
+    <p style="text-align: center;">
+        Count: {{ count }}<br>
+        Visits: {{ visits }}
+    </p>
+    <form action="/" method="POST">
+        <div class="buttons">
+            <input type="number" name="increment" value="1">
+            <button name="action" value="increment">Click</button>
+            <button name="action" value="reset">Reset</button>
+        </div>
+    </form>
+</body>
+</html>
