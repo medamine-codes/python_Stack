@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <form action="/" method="POST">
+
+            <h2>Dojo Survey</h2>
+            <label for="dame">Name:</label>
+            <input type="text" name="name" value=""><br>
+            <label for="dlocation">Dojo Location:</label><br>
+            <select name="location" id="dojo"><br>
+                <option value="Tunis">Tunis</option>
+                <option value="Ariana">Ariana</option>
+                <option value="Ben arous">Ben arous</option>
+                <option value="Benzart">Benzart</option>
+                <option value="TAtaouin">Tataouin</option>
+            </select><br>
+            <label for="dlanguage">Favorite Language:</label><br>
+            <select name="language" id="dojo"><br><br>
+                <option value=" HTML">HTML</option>
+                <option value="JAVASCRIPT">JAVASCRIPT</option>
+                <option value="PYTHON">PYTHON</option>
+                <option value="MERN">MERN</option>
+                <option value="C#">C#</option>
+            </select>
+            <textarea name="comment" id="" cols="25" rows="8"></textarea>
+            <input type="submit" value="Update">
+            <BUtton><a href="/show">Profile</a></BUtton>
+            <button><a href="/clear">Clear</a></button>
+        </form>
+
+    </div>
+</body>
+
+</html>

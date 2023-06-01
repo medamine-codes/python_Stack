@@ -1,0 +1,25 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.container,form {
+    padding: 25px;
+    margin: 15px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    background-color: rgb(43, 41, 41);
+    color: white;
+
+}
+textarea {
+    margin-top: 5px;
+}
+h2 {
+    color: moccasin;
+}
+input, select {
+    padding: 5px;
+}
